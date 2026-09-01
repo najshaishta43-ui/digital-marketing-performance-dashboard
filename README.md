@@ -3,10 +3,9 @@
 Cross-platform digital marketing analytics project (Excel + Tableau) analyzing  campaigns across Facebook, Google Ads, Instagram &amp; LinkedIn — pivot tables, ROI/CPC/CTR calculations, and dashboard visualization to identify top-performing campaigns and optimize ad spend.
 **Cross-Platform Ad Campaign Analysis — Excel + Tableau**
 
-![Dashboard Preview](assets/dashboard-preview.png)
+![Dashboard Preview](Screenshot%2026-09-01%20003113)
 
 ---
-
 ## Problem Statement
 
 Marketing teams often run paid campaigns across multiple platforms without a unified view of which channel is actually generating the best return. This project analyzes campaign performance across **Facebook, Google Ads, Instagram, and LinkedIn** to answer:
