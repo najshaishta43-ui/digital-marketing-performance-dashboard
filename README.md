@@ -27,7 +27,7 @@ The analysis focuses on four key business questions:
 
 ## Dataset
 
-- **40 campaign records**
+- **36 campaign records**
 - **4 advertising platforms:** Facebook, Google Ads, Instagram, LinkedIn
 - **12 campaign types**
 - **Period:** January – March 2026
