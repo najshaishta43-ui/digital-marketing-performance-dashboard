@@ -1,113 +1,263 @@
 
 # Digital Marketing Performance Dashboard
 Cross-platform digital marketing analytics project (Excel + Tableau) analyzing  campaigns across Facebook, Google Ads, Instagram &amp; LinkedIn — pivot tables, ROI/CPC/CTR calculations, and dashboard visualization to identify top-performing campaigns and optimize ad spend.
-**Cross-Platform Ad Campaign Analysis — Excel + Tableau**
-
-![Dashboard Preview](Screenshot%2026-09-01%20003113)
 
 ---
+
+## 📊 Dashboard Preview
+
+![Tableau Dashboard](Screenshot%202026-09-01%20003113.png)
+
+**Tableau Dashboard Preview**
+
+---
+
 ## Problem Statement
 
-Marketing teams often run paid campaigns across multiple platforms without a unified view of which channel is actually generating the best return. This project analyzes campaign performance across **Facebook, Google Ads, Instagram, and LinkedIn** to answer:
+Marketing teams often run paid campaigns across multiple platforms without having a unified view of campaign performance. This project analyzes campaign-level data to understand which platforms and campaigns are delivering the strongest results and where advertising spend may be inefficient.
 
-1. Which platform delivers the best ROI, and where should budget be reallocated?
-2. Which platforms are cost-efficient (low CPC) versus highly effective (high conversion rate)?
-3. Which individual campaigns are top performers — and which are underperforming?
-4. Where is ad spend not translating into return?
+The analysis focuses on four key business questions:
+
+1. Which platform delivers the best ROI?
+2. Which platforms are more cost-efficient based on CPC and conversion performance?
+3. Which individual campaigns are performing best and worst?
+4. Where is high advertising spend not translating into strong returns?
 
 ---
 
 ## Dataset
 
-- **40 campaign records** across 4 platforms and 12 campaign types
+- **40 campaign records**
+- **4 advertising platforms:** Facebook, Google Ads, Instagram, LinkedIn
+- **12 campaign types**
 - **Period:** January – March 2026
-- **Metrics tracked:** Impressions, Reach, Clicks, CTR (%), Ad Spend (INR), Conversions, Conversion Rate (%), CPC (INR), ROI (x)
-- This is a simulated dataset built to mirror the structure and metrics of real campaign reporting.
+- **Currency:** Indian Rupees (₹)
+- Dataset is **simulated** and created for portfolio/project demonstration purposes.
+
+### Metrics Analyzed
+
+- Impressions
+- Reach
+- Clicks
+- CTR (%)
+- Ad Spend (INR)
+- Conversions
+- Conversion Rate (%)
+- CPC (INR)
+- ROI (x)
 
 ---
 
 ## Methodology
 
-- Built pivot tables in Excel to aggregate performance by platform and by campaign, applying standard marketing formulas:
-  - `CTR (%) = Clicks / Impressions`
-  - `Conversion Rate (%) = Conversions / Clicks`
-  - `CPC (INR) = Ad Spend / Clicks`
-  - `ROI (x) = Revenue / Ad Spend`
-- Verified aggregation logic across all pivot tables (using Average for rate-based metrics, Sum for volume metrics) to avoid inflated or misleading totals.
-- Rebuilt the analysis visually in **Tableau**, including a dual-axis chart (CPC vs. Conversion Rate), a ranked bar chart, a scatter plot (Spend vs. ROI), and a calculated field using `RANK()` to automatically flag top- and bottom-performing campaigns.
+The analysis was completed using **Microsoft Excel** and **Tableau**.
+
+### Excel Analysis
+
+Excel was used to organize the campaign data and create PivotTables for platform-level and campaign-level analysis.
+
+Key calculations included:
+
+- `CTR (%) = Clicks / Impressions × 100`
+- `Conversion Rate (%) = Conversions / Clicks × 100`
+- `CPC (INR) = Ad Spend / Clicks`
+- `ROI (x) = Revenue / Ad Spend`
+
+For PivotTable analysis:
+
+- **Sum** was used for volume metrics such as Spend, Clicks, Impressions, and Conversions.
+- **Average** was used for rate-based metrics such as CTR, Conversion Rate, CPC, and ROI where appropriate.
+
+This helped avoid misleading results caused by incorrectly summing percentage or ratio-based metrics.
+
+### Tableau Analysis
+
+The Excel analysis was then visualized in Tableau to make campaign performance easier to interpret.
+
+The dashboard includes:
+
+- Platform performance comparison
+- CPC vs. Conversion Rate analysis
+- Campaign ROI ranking
+- Spend vs. ROI scatter plot
+- Top- and bottom-performing campaign identification
+- Calculated ranking using `RANK()`
 
 ---
 
-## Key Findings
+## 📈 Key Findings
 
-**Platform Performance (by ROI)**
+### Platform Performance
 
 | Platform | Avg. ROI | Avg. CPC (INR) |
-|---|---|---|
+|---|---:|---:|
 | Facebook | **10.41x** | ₹108 |
 | Google Ads | 9.14x | ₹94 |
-| Instagram | 8.52x | ₹80 |
+| Instagram | 8.52x | **₹80** |
 | LinkedIn | 7.01x | ₹159 |
 
-Facebook delivers the strongest return despite a mid-range cost per click. LinkedIn is the most expensive platform per click and also the weakest on ROI — a candidate for budget reduction unless the goal is specifically high-value B2B leads.
+### Key Insight
 
-**Top Campaigns**
+**Facebook** delivered the highest average ROI at **10.41x**, making it the strongest-performing platform in the dataset.
+
+**Instagram** had the lowest average CPC at **₹80**, making it the most cost-efficient platform for generating clicks.
+
+**LinkedIn** had the highest CPC at **₹159** and the lowest average ROI at **7.01x**. However, its higher conversion performance suggests it may still be useful for targeted, high-value B2B campaigns rather than high-volume advertising.
+
+---
+
+## 🏆 Top-Performing Campaigns
 
 | Campaign | ROI | Conversions |
-|---|---|---|
+|---|---:|---:|
 | Lead Gen – Carousel | **78.9x** | 529 |
 | B2B Lead Gen | 41.5x | 271 |
 | Search – Generic Keywords | 37.2x | 379 |
 | Display Remarketing | 34.3x | 144 |
 
-**Weakest Campaign:** Thought Leadership Article — 1.99x ROI on ₹32,541 spend, 55 conversions. A clear candidate to pause or redesign.
+### ⚠️ Weakest Campaign
 
-**Overall:** ₹4,19,198 total spend → 2,793 conversions → 8.77x average ROI across all campaigns.
+**Thought Leadership Article**
 
----
+- ROI: **1.99x**
+- Ad Spend: **₹32,541**
+- Conversions: **55**
 
-## How This Project Solves the Problem
-
-This dashboard directly answers each question raised in the Problem Statement:
-
-- **Which platform delivers the best ROI?** → Facebook (10.41x), identified through platform-wise pivot analysis — giving a clear basis for budget reallocation.
-- **Cost-efficient vs. highly effective platforms?** → Instagram is cheapest per click (₹80 CPC), while LinkedIn converts best (55%) but costs most (₹159 CPC) — the dual-axis chart makes this trade-off visible at a glance instead of buried in raw numbers.
-- **Top vs. underperforming campaigns?** → The ranked bar chart flags Lead Gen – Carousel (78.9x ROI) as the clear winner and Thought Leadership Article (1.99x ROI) as the weakest, using an automated RANK() calculation rather than manual eyeballing.
-- **Where is spend wasted?** → The Spend vs. ROI scatter plot isolates high-spend, low-return campaigns visually, making inefficient spend easy to spot without scanning every row.
-
-In short: instead of leaving a marketing team to manually cross-reference spreadsheets, this dashboard turns raw campaign data into a direct, visual answer to "where should our next rupee of ad spend go."
+This campaign represents a potential area for optimization because it combines relatively high spend with significantly lower returns compared with the strongest campaigns.
 
 ---
 
-## Recommendation
+## 💡 Business Insights
 
-Reallocate budget away from low-performing awareness content (e.g. Thought Leadership Article) toward proven conversion-driven formats — particularly Lead Gen – Carousel and Display Remarketing. Shift a greater share of spend toward Facebook, which is outperforming its cost, and treat LinkedIn as a targeted channel for high-value leads rather than a volume platform given its higher CPC.
+The analysis shows that campaign performance differs significantly by both **platform and campaign type**.
 
-*Note: this dataset is simulated. The recommendation reflects the patterns present in the data, applying the same decision logic used for real campaign optimization.*
+### 1. Prioritize high-ROI campaigns
 
----
+Lead-generation and conversion-focused campaigns produced some of the strongest ROI values in the dataset.
 
-## Dashboard
+### 2. Monitor high-spend, low-return campaigns
 
-**Excel — Pivot Table Analysis**
-![Excel Pivot Tables](assets/excel-pivots.png)
+Campaigns with relatively high advertising spend but weak ROI should be reviewed before additional budget is allocated.
 
-**Tableau — Interactive Dashboard**
-![Tableau Dashboard](assets/tableau-dashboard.png)
+### 3. Consider platform-specific objectives
 
-🔗 [View Interactive Dashboard on Tableau Public](#)
+The cheapest platform is not necessarily the platform with the highest ROI.
 
----
+For example:
 
-## Tools Used
-`Excel (PivotTables, Marketing Formulas, Conditional Formatting)` · `Tableau (Dual-Axis Charts, Calculated Fields, Scatter Plots)`
+- Instagram → Lowest CPC
+- Facebook → Highest average ROI
+- LinkedIn → Higher CPC but potentially useful for targeted B2B campaigns
 
----
-
-## What I Learned
-
-A short, honest paragraph on what was genuinely difficult or surprising — e.g. catching aggregation errors in pivot tables (summing percentages instead of averaging), understanding why CPC and Conversion Rate need separate axes to compare meaningfully, or what the data revealed about the CTR-to-conversion gap. This section should be written in your own words — it's what makes the project sound like real work, not a template.
+This highlights the importance of evaluating multiple KPIs rather than using CPC alone to make budget decisions.
 
 ---
 
-## Repository Structure
+## 📊 How This Project Solves the Problem
+
+The dashboard converts campaign-level advertising data into actionable marketing insights.
+
+### Which platform performs best?
+
+**Facebook**, with an average ROI of **10.41x**, is the strongest platform based on the dataset.
+
+### Which platform is most cost-efficient?
+
+**Instagram** has the lowest average CPC at **₹80**, making it the most cost-efficient platform for clicks.
+
+### Which campaigns perform best?
+
+**Lead Gen – Carousel** is the strongest campaign with **78.9x ROI** and **529 conversions**.
+
+### Where should marketers investigate inefficient spending?
+
+The **Spend vs. ROI scatter plot** helps identify campaigns where relatively high spending is associated with weaker returns.
+
+This allows a marketing team to quickly identify campaigns that may require:
+
+- Budget reduction
+- Creative changes
+- Audience optimization
+- Campaign restructuring
+- Testing before additional investment
+
+---
+
+## 🎯 Recommendation
+
+Based on the patterns in the dataset, marketing teams should consider reallocating part of the budget from weaker campaigns toward campaigns with consistently stronger ROI and conversion performance.
+
+In particular:
+
+- Increase focus on high-performing lead-generation campaigns.
+- Continue testing **Facebook** due to its strongest average ROI.
+- Use **Instagram** where low CPC and efficient traffic generation are important.
+- Treat **LinkedIn** as a more targeted B2B channel rather than simply optimizing for low CPC.
+- Review or redesign campaigns such as **Thought Leadership Article** before increasing their budgets.
+
+> **Note:** The dataset is simulated. These recommendations demonstrate the analytical decision-making process that could be applied to real advertising data.
+
+---
+
+## 📷 Project Screenshots
+
+### Tableau Dashboard
+
+![Tableau Dashboard](Screenshot%202026-09-01%20003113.png)
+
+**[Open Tableau Dashboard Screenshot](Screenshot%202026-09-01%20003113.png)**
+
+### Excel Pivot Table Analysis
+
+![Excel Pivot Tables](Screenshot%202026-09-01%20190137.png)
+
+**[Open Excel Pivot Table Screenshot](Screenshot%202026-09-01%20190137.png)**
+
+---
+
+## 📁 Project Files
+
+### Excel Analysis
+
+[**Download / View Excel Dashboard & Pivot Analysis**](Digital_Marketing_Performance_Dashboard.xlsx)
+
+Contains the campaign dataset, calculations, PivotTable analysis, and supporting Excel work.
+
+### Tableau Workbook
+
+[**Open Tableau Workbook (.twb)**](Digital%20marketing%20performance%20dashboard.twb)
+
+Contains the Tableau dashboard, calculated fields, charts, rankings, and visual analysis.
+
+### Dashboard Screenshot
+
+[**View Tableau Dashboard Screenshot**](Screenshot%202026-09-01%20003113.png)
+
+### Excel Screenshot
+
+[**View Excel Pivot Table Screenshot**](Screenshot%202026-09-01%20190137.png)
+
+---
+
+##  Tools Used
+
+`Microsoft Excel` · `PivotTables` · `Calculated Metrics` · `Conditional Formatting` · `Tableau` · `Calculated Fields` · `RANK()` · `Data Visualization`
+
+---
+
+##  What I Learned
+
+This project helped me understand how marketing KPIs should be analyzed together rather than individually. One of the important lessons was that metrics such as CTR, Conversion Rate, CPC, and ROI should not be treated in the same way when creating PivotTables. I also learned how Tableau can turn spreadsheet-based analysis into a more interactive visual story. Comparing CPC with Conversion Rate showed me that the cheapest source of clicks is not always the most effective source of conversions, while the Spend vs. ROI analysis helped me understand how dashboards can support practical budget allocation decisions.
+
+---
+
+## 📂 Repository Structure
+
+```text
+digital-marketing-performance-dashboard/
+│
+├── Digital marketing performance dashboard.twb
+├── Digital_Marketing_Performance_Dashboard.xlsx
+├── README.md
+├── Screenshot 2026-09-01 003113.png
+└── Screenshot 2026-09-01 190137.png
