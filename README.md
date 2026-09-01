@@ -4,7 +4,7 @@ Cross-platform digital marketing analytics project (Excel + Tableau) analyzing  
 
 ---
 
-## 📊 Dashboard Preview
+##  Dashboard Preview
 
 ![Tableau Dashboard](Screenshot%202026-09-01%20003113.png)
 
@@ -85,7 +85,7 @@ The dashboard includes:
 
 ---
 
-## 📈 Key Findings
+##  Key Findings
 
 ### Platform Performance
 
@@ -106,7 +106,7 @@ The dashboard includes:
 
 ---
 
-## 🏆 Top-Performing Campaigns
+##  Top-Performing Campaigns
 
 | Campaign | ROI | Conversions |
 |---|---:|---:|
@@ -115,7 +115,7 @@ The dashboard includes:
 | Search – Generic Keywords | 37.2x | 379 |
 | Display Remarketing | 34.3x | 144 |
 
-### ⚠️ Weakest Campaign
+###  Weakest Campaign
 
 **Thought Leadership Article**
 
@@ -127,7 +127,7 @@ This campaign represents a potential area for optimization because it combines r
 
 ---
 
-## 💡 Business Insights
+##  Business Insights
 
 The analysis shows that campaign performance differs significantly by both **platform and campaign type**.
 
@@ -153,7 +153,7 @@ This highlights the importance of evaluating multiple KPIs rather than using CPC
 
 ---
 
-## 📊 How This Project Solves the Problem
+##  How This Project Solves the Problem
 
 The dashboard converts campaign-level advertising data into actionable marketing insights.
 
@@ -183,7 +183,7 @@ This allows a marketing team to quickly identify campaigns that may require:
 
 ---
 
-## 🎯 Recommendation
+##  Recommendation
 
 Based on the patterns in the dataset, marketing teams should consider reallocating part of the budget from weaker campaigns toward campaigns with consistently stronger ROI and conversion performance.
 
